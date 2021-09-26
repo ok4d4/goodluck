@@ -1,16 +1,14 @@
 {
   "_name_or_path": "rinna/japanese-gpt2-medium",
   "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
+  "architectures": ["GPT2LMHeadModel"],
   "attn_pdrop": 0.1,
   "bos_token_id": 1,
   "embd_pdrop": 0.1,
   "eos_token_id": 2,
   "gradient_checkpointing": false,
   "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
+  "layer_norm_epsilon": 1e-5,
   "model_type": "gpt2",
   "n_ctx": 1024,
   "n_embd": 1024,
@@ -28,7 +26,8 @@
   "task_specific_params": {
     "text-generation": {
       "do_sample": true,
-      "max_length": 50
+      "min_length": 800,
+      "max_length": 1000
     }
   },
   "transformers_version": "4.4.2",
